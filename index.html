@@ -4,12 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Video Background Project">
     <meta name="author" content="Leah Somerville">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/27d1055c8a.js" crossorigin="anonymous"></script>
     <title>Video Background Project</title>
 </head>
 <body>
-    
+    <section id="main">
+        <div id="video-container">
+            <!-- Autoplay starts the vidoe, loop lopps the video, and muted removes sound. -->
+            <video src="html.mp4" autoplay loop muted></video>
+        </div>
+        <!-- Div to cover/darken the video -->
+        <div id="cover"></div>
+        <div id="content">
+            <h1>Leah Somerville</h1>
+            <h2>Web Developer</h2>
+            <!-- href="#" takes you to a diffrent part on the webpage, not another page -->
+            <a href="#about" id="click">About</a>
+        </div>
+    </section>
 </body>
 </html>
