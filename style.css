@@ -22,3 +22,76 @@ a{
     text-decoration: none;
     color: #3eded9;
 }
+
+#main{
+    /* "vh" (viewport height) determines the height of an element by setting it to a percentage of the viewport. (NOTE: Vw is used for width) */
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    /* The following two justify-content and align-items will only affect the "content" div (3rd div) */
+    justify-content: center;
+    align-items: center;
+
+    /* so the text dowesn't go aganist the left and right edges of smaller screen size */
+    padding: 0 20px;
+
+    /* setting positn:relative; here so #video-container div will be psotioned relative to this element instead of root element  */
+    position: relative;
+}
+
+#video-container{
+    /* first frame of the video in case the video does NOT immediatly start playing */
+    background-image: url(cover.png);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: center;
+    background-size: cover;
+}
+
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; determines how a video/image is resized to fit its container (AKA parent element). Setting the value to "cover" causes the video to retain its shape. */
+    /* In this case, causes the video to still take up the vertical space on smaller screen sizes. */
+    object-fit: cover;
+}
+
+#cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+}
+
+#content{
+    color: white;
+    z-index: 1;
+    text-align: center;
+}
+
+#click{
+    /* Allows for top and bottom margin as well as width and height to be set. This is not the case with inline. */
+    display: inline-block;
+    border: 2px solid white;
+    padding: 10px 30px;
+    background-color: #4b5163;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+#click:hover{
+    /* Changes the size of an element */
+    transform: scale(0.95);
+    
+}
